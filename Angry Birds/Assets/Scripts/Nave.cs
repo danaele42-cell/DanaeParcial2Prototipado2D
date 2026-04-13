@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 public class Nave : MonoBehaviour
 {
     [SerializeField] private float fuerza;
@@ -15,6 +16,12 @@ public class Nave : MonoBehaviour
     public TextMeshProUGUI ganaste;
     public TextMeshProUGUI perdiste;
 
+    private Controles inputActions;
+
+    private void Awake()
+    {
+        inputActions = new Controles();
+    }
 
     void Start()
     {
