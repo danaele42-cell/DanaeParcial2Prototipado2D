@@ -7,6 +7,9 @@ public class Aliens : MonoBehaviour
 {
     [SerializeField] private float cantidadPuntos;
     [SerializeField] private Puntaje puntaje;
+
+
+
     
     private void OnCollisionEnter2D(Collision2D collision)
     {

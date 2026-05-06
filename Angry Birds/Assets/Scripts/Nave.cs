@@ -17,12 +17,33 @@ public class Nave : MonoBehaviour
     public TextMeshProUGUI perdiste;
 
     private Controles inputActions;
-
+    
     private void Awake()
     {
         inputActions = new Controles();
     }
 
+    private void OnEnable()
+    {
+        inputActions.PajarosVcerdos.Enable();
+        inputActions.PajarosVcerdos.Presionado.started += LePico;
+        inputActions.PajarosVcerdos.Pow.started += Pupow;
+
+    }
+
+    void Pupow(InputAction.CallbackContext handler)
+    {
+        print("Espacio >:D");
+    }
+    void LePico(InputAction.CallbackContext handler)
+    {
+        print("Le pico al click izquierdo");
+    }
+
+    private void OnDisable()
+    {
+
+    }
     void Start()
     {
         mainCamera = Camera.main;
@@ -58,6 +79,8 @@ public class Nave : MonoBehaviour
         rb.bodyType = RigidbodyType2D.Dynamic;
         Vector2 throwVector = posicionInicial - posicionLimite;
         rb.AddForce(throwVector * fuerza);
+
+        print("Y se marcho U.U~");
 
         float reseto = 5f;
         Invoke("Resetar", reseto);

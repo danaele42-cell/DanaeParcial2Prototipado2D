@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Position",
+                    "name": "Pow",
                     "type": "Value",
                     "id": "aab865aa-848f-4dff-a3e7-6d49d35bd5f5",
                     "expectedControlType": "",
@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Posicion",
+                    "type": "Value",
+                    "id": "69c9e6fe-8e16-4288-9dc5-454cab3d5c7b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -48,11 +57,11 @@
                 {
                     "name": "",
                     "id": "77a09357-6fbd-43df-8979-7ffdd3fc3be6",
-                    "path": "<Mouse>/position",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Position",
+                    "action": "Pow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -64,6 +73,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Potenciamas",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fc6e6bb-d2cc-43c3-89c7-a93b7b96043a",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Posicion",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
